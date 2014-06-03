@@ -1,5 +1,5 @@
 # read data from CSV file:
-data <- read.csv("household_power_consumption.txt",header=TRUE,sep=";")
+data <- read.csv("household_power_consumption.txt",header=TRUE,sep=";",stringsAsFactors=FALSE)
 
 # convert "Date" column to R date format:
 data$Date<-as.Date(strptime(data$Date,format="%d/%m/%Y"))
@@ -14,7 +14,7 @@ data$Global_active_power <- as.numeric(data$Global_active_power)
 png(filename="plot1.png",width=480,height=480)
 
 # create histogram
-hist(2.0*data$Global_active_power/1000.0,col="red",xlab="Global Active Power (kilowatts)",main="Global active power")
+hist(data$Global_active_power,col="red",xlab="Global Active Power (kilowatts)",main="Global active power")
 
 # close PNG device:
 dev.off()
