@@ -1,6 +1,3 @@
-## Please note
-My R installation uses german language settings, so plots have "Do" instead of "Thu", "Fr" instead of "Fri" and "Sa" instead of "Sat"
- 
 ## Introduction
 
 This assignment uses data from
