@@ -17,6 +17,7 @@ data$Sub_metering_3 <- as.numeric(data$Sub_metering_3)
 png(filename="plot4.png",width=480,height=480)
 
 # create plot:
+Sys.setlocale('LC_ALL', 'en_US')
 par(mfrow=c(2,2))
 # plot 1:
 plot(data$Date,data$Global_active_power,type="l",xlab="",ylab="Global Active Power (kilowatts)")

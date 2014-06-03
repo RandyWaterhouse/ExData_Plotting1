@@ -14,6 +14,7 @@ data$Global_active_power <- as.numeric(data$Global_active_power)
 png(filename="plot2.png",width=480,height=480)
 
 # create plot:
+Sys.setlocale('LC_ALL', 'en_US')
 plot(data$Date,data$Global_active_power,type="l",xlab="",ylab="Global Active Power (kilowatts)")
 
 # close PNG device:
